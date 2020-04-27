@@ -2,10 +2,10 @@ const MyArray = require('./myArray');
 
 const newArray = new MyArray();
 
-	/*newArray.push(0);
+	newArray.push(0);
 	newArray.push(3);
 	newArray.push(4);
-	newArray.push(31);*/
+	newArray.push(31);
 console.log(newArray);
 
 const newArray2 = new MyArray();
