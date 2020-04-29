@@ -46,6 +46,15 @@ class HashTable {
 		}
 
 		return currentKeys;
+		}
+
+	contains(key){
+
+		if(this.get(key)){
+			return true;
+		}
+
+		return false;
 	}
 }
 
