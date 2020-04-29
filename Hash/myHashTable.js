@@ -36,6 +36,17 @@ class HashTable {
 		}
 		return undefined;
 	}
+
+	keys() {
+		const currentKeys = [];
+		for(let i = 0; i < this.data.length; i++){
+			if(this.data[i]){
+				currentKeys.push(this.data[i][0][0]);
+			}
+		}
+
+		return currentKeys;
+	}
 }
 
 module.exports = HashTable;
