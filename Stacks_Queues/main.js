@@ -1,8 +1,9 @@
 const Stack = require("./stack");
+const StackArray = require("./stackArray");
 
 const myStack = new Stack();
 
-myStack.push("google");
+/*myStack.push("google");
 //console.log(myStack);
 myStack.push("discord");
 myStack.push("Udemy");
@@ -18,3 +19,12 @@ myStack.pop();
 console.log(myStack);
 myStack.pop()
 console.log(myStack);
+*/
+
+const stack2 = new StackArray();
+
+stack2.push("google");
+stack2.push("discord");
+stack2.push("Udemy");
+console.log(stack2.peek());
+console.log(stack2.pop());
