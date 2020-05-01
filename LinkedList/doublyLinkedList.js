@@ -6,7 +6,7 @@ class Node {
 	}
 }
 
-class LinkedList {
+class DoublyLinkedList {
 
 	constructor(){
 		this.length = 0;
@@ -205,4 +205,4 @@ class LinkedList {
 	}
 }
 
-module.exports = LinkedList;
+module.exports = DoublyLinkedList;

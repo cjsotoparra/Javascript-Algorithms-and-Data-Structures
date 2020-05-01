@@ -1,6 +1,6 @@
-const LinkedList = require("./linkedList.js");
+const doublyLinkedList = require("./doublyLinkedList.js");
 
-ll = new LinkedList();
+ll = new doublyLinkedList();
 
 //ll.append(1);
 //ll.append(0);
