@@ -32,8 +32,8 @@ function fibonacciIterative(n){
 	return answer
 }
 
-console.log("Recursive");
-console.log(fibonacciRecursive(0))
+//console.log("Recursive");
+/*console.log(fibonacciRecursive(0))
 console.log(fibonacciRecursive(1))
 console.log(fibonacciRecursive(2))
 console.log(fibonacciRecursive(3))
@@ -42,9 +42,9 @@ console.log(fibonacciRecursive(5))
 console.log(fibonacciRecursive(6))
 console.log(fibonacciRecursive(7))
 console.log(fibonacciRecursive(8))
-console.log(fibonacciRecursive(9))
-console.log(fibonacciRecursive(10));
-console.log("Iterative");
+console.log(fibonacciRecursive(9))*/
+console.log(fibonacciRecursive(40));
+/*console.log("Iterative");
 console.log(fibonacciIterative(0));
 console.log(fibonacciIterative(1));
 console.log(fibonacciIterative(2));
@@ -54,5 +54,5 @@ console.log(fibonacciIterative(5));
 console.log(fibonacciIterative(6));
 console.log(fibonacciIterative(7));
 console.log(fibonacciIterative(8));
-console.log(fibonacciIterative(9));
-console.log(fibonacciIterative(10));
+console.log(fibonacciIterative(9));*/
+console.log(fibonacciIterative(40));
