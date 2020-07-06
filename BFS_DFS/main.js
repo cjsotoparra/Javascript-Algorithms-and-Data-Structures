@@ -13,6 +13,7 @@ myBST.insert(1);
 //console.log(JSON.stringify(traverse(myBST.root)))
 
 console.log(myBST.bFS())
+console.log(myBST.bFSR([myBST.root], []));
 function traverse(node) {
   	const tree = { value: node.value };
   	tree.left = node.left === null ? null : traverse(node.left);

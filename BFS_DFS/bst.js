@@ -175,6 +175,28 @@ class BinarySearchTree{
 
 		return list;
 	}
+
+	bFSR(queue, list){
+		if(!queue.length){
+			return list;
+		}
+
+		let currentNode = queue.shift();
+		list.push(currentNode.value);
+
+		//does currentNode have left child
+                if(currentNode.left){
+                	queue.push(currentNode.left);
+                }
+
+                //does currentNode have right child
+                if(currentNode.right){
+                	queue.push(currentNode.right);
+                }
+
+		return this.bFSR(queue, list);
+
+	}
 }
 
 module.exports = BinarySearchTree;
