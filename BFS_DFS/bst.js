@@ -197,6 +197,33 @@ class BinarySearchTree{
 		return this.bFSR(queue, list);
 
 	}
+
+	dfsInOrder(node){
+		if(node == null){
+			return;
+		}
+		this.dfsInOrder(node.left);
+		console.log(node.value);
+		this.dfsInOrder(node.right);
+	}
+
+	dfsPostOrder(node){
+                if(node == null){
+			return;
+		}
+
+                this.dfsPostOrder(node.left);
+                this.dfsPostOrder(node.right);
+		console.log(node.value);
+	}
+
+	dfsPreOrder(node){
+                if(node){
+			console.log(node.value)
+                        this.dfsPreOrder(node.left);
+                        this.dfsPreOrder(node.right);
+                }
+	}
 }
 
 module.exports = BinarySearchTree;
