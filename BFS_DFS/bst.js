@@ -224,6 +224,29 @@ class BinarySearchTree{
                         this.dfsPreOrder(node.right);
                 }
 	}
+
+	isBST(node){
+		let stack = [];
+		let left_child_val = -Number.MAX_VALUE;
+
+		while(stack.length != 0 || node != null){
+			while(node != null){
+				stack.push(node);
+				node = node.left;
+			}
+
+			node = stack.pop();
+
+			if(node.value <= left_child_val){
+				return false;
+			}
+
+			left_child_val = node.value;
+			node = node.right
+		}
+
+		return true;
+	}
 }
 
 module.exports = BinarySearchTree;

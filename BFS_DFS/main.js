@@ -9,12 +9,16 @@ myBST.insert(1);
 myBST.insert(20);
 myBST.insert(170);
 myBST.insert(15);
-//console.log(myBST.remove(9));
-//console.log(JSON.stringify(traverse(myBST.root)))
 
-//console.log(myBST.bFS())
-//console.log(myBST.bFSR([myBST.root], []));
-myBST.dfsPostOrder(myBST.root);
+const max = Number.MAX_SAFE_INTEGER;
+const min = Number.MIN_SAFE_INTEGER;
+
+//console.log(myBST.isValid(myBST, min, max));
+
+const test = new BinarySearchTree();
+
+
+console.log(test.isBST());
 
 function traverse(node) {
   	const tree = { value: node.value };
