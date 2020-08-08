@@ -19,19 +19,32 @@ function memoizedAddTo80(){
 
 const memoized = memoizedAddTo80()
 
-console.log('1', memoized(5));
-console.log('2', memoized(5));
+//console.log('1', memoized(5));
+//console.log('2', memoized(5));
 
 let cal = 0;
-function fibonacci(n){
-	cal++;
-	if(n <2){
-		return n;
-	}
 
-	return fibonacci(n-1) + fibonacci(n-2);
+function fibonacci(){
+	// make a cache hash table(sacrificing space for time) O(n)
+	let cache = {};
+	return function fib(n){
+		cal++;
+		//if number has been already calculated, just return it
+		if(n in cache){
+			return cache[n];
+		}else{
+			if(n < 2){
+				return n;
+			} else {
+				//add recurison to cache and return new calculation
+				cache[n] = fib(n-1) + fib(n-2);
+				return cache[n];
+			}
+		}
+	}
 }
 
-fibonacci(40);
+const fasterFib = fibonacci();
 
-console.log(cal);
+console.log('DP: ', fasterFib(100));
+console.log('calculations: ', cal);
