@@ -1,4 +1,5 @@
 nums = [4,1,2];
+num2 = [3,1,2,5,4,2];
 
 var rob = function(nums){
 	const length = nums.length;
@@ -33,4 +34,30 @@ var rob = function(nums){
 	return steal[steal.length-1];
 }
 
-console.log(rob(nums));
+//works but it is slow
+function houseRobberRecursive(arr){
+	function stealFromHouse(index){
+		if(index >= arr.length){
+			return 0;
+		}
+
+		return Math.max(arr[index] + stealFromHouse(index+2), stealFromHouse(index + 1));
+	}
+
+	return stealFromHouse(0);
+}
+
+function houseRobber1(houses){
+	let max_gold = [];
+
+	for(let i = 0; i<houses.length; i++){
+		let current = houses[i];
+		let prevMax = max_gold[i-1] || 0;
+		let twoBackMax = max_gold[i-2] || 0;
+		max_gold.push(Math.max(current + twoBackMax, prevMax));
+	}
+
+	return max_gold[houses.length -1];
+}
+
+console.log(houseRobber1(num2));
