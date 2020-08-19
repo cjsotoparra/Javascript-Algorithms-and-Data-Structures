@@ -24,6 +24,15 @@ const memoized = memoizedAddTo80()
 
 let cal = 0;
 
+function fibonacciMaster2(n){
+	let answer = [0,1];
+	for(let i = 2; i<=n; i++){
+		answer.push(answer[i-2] + answer[i-1]);
+	}
+
+	return answer.pop();
+}
+
 function fibonacci(){
 	// make a cache hash table(sacrificing space for time) O(n)
 	let cache = {};
@@ -48,3 +57,4 @@ const fasterFib = fibonacci();
 
 console.log('DP: ', fasterFib(100));
 console.log('calculations: ', cal);
+console.log('DP2', fibonacciMaster2(100));
